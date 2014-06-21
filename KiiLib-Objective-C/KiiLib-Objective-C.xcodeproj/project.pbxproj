@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74DDBA0A195576A200419934 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA09195576A200419934 /* Foundation.framework */; };
+		74DDBA0F195576A200419934 /* KiiLib_Objective_C.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA0E195576A200419934 /* KiiLib_Objective_C.h */; };
+		74DDBA11195576A200419934 /* KiiLib_Objective_C.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA10195576A200419934 /* KiiLib_Objective_C.m */; };
+		74DDBA18195576A200419934 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA17195576A200419934 /* XCTest.framework */; };
+		74DDBA19195576A200419934 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA09195576A200419934 /* Foundation.framework */; };
+		74DDBA1B195576A200419934 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA1A195576A200419934 /* UIKit.framework */; };
+		74DDBA1E195576A200419934 /* libKiiLib-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA06195576A200419934 /* libKiiLib-Objective-C.a */; };
+		74DDBA24195576A200419934 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74DDBA22195576A200419934 /* InfoPlist.strings */; };
+		74DDBA26195576A200419934 /* KiiLib_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74DDBA1C195576A200419934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DDB9FE195576A200419934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74DDBA05195576A200419934;
+			remoteInfo = "KiiLib-Objective-C";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74DDBA04195576A200419934 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				74DDBA0F195576A200419934 /* KiiLib_Objective_C.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		74DDBA06195576A200419934 /* libKiiLib-Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKiiLib-Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DDBA09195576A200419934 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74DDBA0D195576A200419934 /* KiiLib-Objective-C-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiiLib-Objective-C-Prefix.pch"; sourceTree = "<group>"; };
+		74DDBA0E195576A200419934 /* KiiLib_Objective_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiiLib_Objective_C.h; sourceTree = "<group>"; };
+		74DDBA10195576A200419934 /* KiiLib_Objective_C.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiLib_Objective_C.m; sourceTree = "<group>"; };
+		74DDBA16195576A200419934 /* KiiLib-Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KiiLib-Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DDBA17195576A200419934 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		74DDBA1A195576A200419934 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		74DDBA21195576A200419934 /* KiiLib-Objective-CTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiiLib-Objective-CTests-Info.plist"; sourceTree = "<group>"; };
+		74DDBA23195576A200419934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiLib_Objective_CTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74DDBA03195576A200419934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DDBA0A195576A200419934 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DDBA13195576A200419934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DDBA18195576A200419934 /* XCTest.framework in Frameworks */,
+				74DDBA1E195576A200419934 /* libKiiLib-Objective-C.a in Frameworks */,
+				74DDBA1B195576A200419934 /* UIKit.framework in Frameworks */,
+				74DDBA19195576A200419934 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74DDB9FD195576A200419934 = {
+			isa = PBXGroup;
+			children = (
+				74DDBA0B195576A200419934 /* KiiLib-Objective-C */,
+				74DDBA1F195576A200419934 /* KiiLib-Objective-CTests */,
+				74DDBA08195576A200419934 /* Frameworks */,
+				74DDBA07195576A200419934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74DDBA07195576A200419934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA06195576A200419934 /* libKiiLib-Objective-C.a */,
+				74DDBA16195576A200419934 /* KiiLib-Objective-CTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74DDBA08195576A200419934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA09195576A200419934 /* Foundation.framework */,
+				74DDBA17195576A200419934 /* XCTest.framework */,
+				74DDBA1A195576A200419934 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74DDBA0B195576A200419934 /* KiiLib-Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA0E195576A200419934 /* KiiLib_Objective_C.h */,
+				74DDBA10195576A200419934 /* KiiLib_Objective_C.m */,
+				74DDBA0C195576A200419934 /* Supporting Files */,
+			);
+			path = "KiiLib-Objective-C";
+			sourceTree = "<group>";
+		};
+		74DDBA0C195576A200419934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA0D195576A200419934 /* KiiLib-Objective-C-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74DDBA1F195576A200419934 /* KiiLib-Objective-CTests */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */,
+				74DDBA20195576A200419934 /* Supporting Files */,
+			);
+			path = "KiiLib-Objective-CTests";
+			sourceTree = "<group>";
+		};
+		74DDBA20195576A200419934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA21195576A200419934 /* KiiLib-Objective-CTests-Info.plist */,
+				74DDBA22195576A200419934 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74DDBA05195576A200419934 /* KiiLib-Objective-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DDBA29195576A200419934 /* Build configuration list for PBXNativeTarget "KiiLib-Objective-C" */;
+			buildPhases = (
+				74DDBA02195576A200419934 /* Sources */,
+				74DDBA03195576A200419934 /* Frameworks */,
+				74DDBA04195576A200419934 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KiiLib-Objective-C";
+			productName = "KiiLib-Objective-C";
+			productReference = 74DDBA06195576A200419934 /* libKiiLib-Objective-C.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74DDBA15195576A200419934 /* KiiLib-Objective-CTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74DDBA2C195576A200419934 /* Build configuration list for PBXNativeTarget "KiiLib-Objective-CTests" */;
+			buildPhases = (
+				74DDBA12195576A200419934 /* Sources */,
+				74DDBA13195576A200419934 /* Frameworks */,
+				74DDBA14195576A200419934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74DDBA1D195576A200419934 /* PBXTargetDependency */,
+			);
+			name = "KiiLib-Objective-CTests";
+			productName = "KiiLib-Objective-CTests";
+			productReference = 74DDBA16195576A200419934 /* KiiLib-Objective-CTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74DDB9FE195576A200419934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = fkmsoft.jp;
+			};
+			buildConfigurationList = 74DDBA01195576A200419934 /* Build configuration list for PBXProject "KiiLib-Objective-C" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74DDB9FD195576A200419934;
+			productRefGroup = 74DDBA07195576A200419934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74DDBA05195576A200419934 /* KiiLib-Objective-C */,
+				74DDBA15195576A200419934 /* KiiLib-Objective-CTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74DDBA14195576A200419934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DDBA24195576A200419934 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74DDBA02195576A200419934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DDBA11195576A200419934 /* KiiLib_Objective_C.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74DDBA12195576A200419934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74DDBA26195576A200419934 /* KiiLib_Objective_CTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74DDBA1D195576A200419934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74DDBA05195576A200419934 /* KiiLib-Objective-C */;
+			targetProxy = 74DDBA1C195576A200419934 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74DDBA22195576A200419934 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74DDBA23195576A200419934 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74DDBA27195576A200419934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		74DDBA28195576A200419934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74DDBA2A195576A200419934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KiiLib_Objective_C.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiLib-Objective-C/KiiLib-Objective-C-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		74DDBA2B195576A200419934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KiiLib_Objective_C.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiLib-Objective-C/KiiLib-Objective-C-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		74DDBA2D195576A200419934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiLib-Objective-C/KiiLib-Objective-C-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KiiLib-Objective-CTests/KiiLib-Objective-CTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		74DDBA2E195576A200419934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KiiLib-Objective-C/KiiLib-Objective-C-Prefix.pch";
+				INFOPLIST_FILE = "KiiLib-Objective-CTests/KiiLib-Objective-CTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74DDBA01195576A200419934 /* Build configuration list for PBXProject "KiiLib-Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DDBA27195576A200419934 /* Debug */,
+				74DDBA28195576A200419934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74DDBA29195576A200419934 /* Build configuration list for PBXNativeTarget "KiiLib-Objective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DDBA2A195576A200419934 /* Debug */,
+				74DDBA2B195576A200419934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74DDBA2C195576A200419934 /* Build configuration list for PBXNativeTarget "KiiLib-Objective-CTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74DDBA2D195576A200419934 /* Debug */,
+				74DDBA2E195576A200419934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74DDB9FE195576A200419934 /* Project object */;
+}
