@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		74DDBA0A195576A200419934 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA09195576A200419934 /* Foundation.framework */; };
-		74DDBA0F195576A200419934 /* KiiLib_Objective_C.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA0E195576A200419934 /* KiiLib_Objective_C.h */; };
-		74DDBA11195576A200419934 /* KiiLib_Objective_C.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA10195576A200419934 /* KiiLib_Objective_C.m */; };
 		74DDBA18195576A200419934 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA17195576A200419934 /* XCTest.framework */; };
 		74DDBA19195576A200419934 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA09195576A200419934 /* Foundation.framework */; };
 		74DDBA1B195576A200419934 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA1A195576A200419934 /* UIKit.framework */; };
 		74DDBA1E195576A200419934 /* libKiiLib-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DDBA06195576A200419934 /* libKiiLib-Objective-C.a */; };
 		74DDBA24195576A200419934 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74DDBA22195576A200419934 /* InfoPlist.strings */; };
 		74DDBA26195576A200419934 /* KiiLib_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */; };
+		74DDBA351955EF2B00419934 /* KLAppAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */; };
+		74DDBA391955F00800419934 /* KLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA381955F00800419934 /* KLUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				74DDBA0F195576A200419934 /* KiiLib_Objective_C.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +44,17 @@
 		74DDBA06195576A200419934 /* libKiiLib-Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKiiLib-Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DDBA09195576A200419934 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74DDBA0D195576A200419934 /* KiiLib-Objective-C-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiiLib-Objective-C-Prefix.pch"; sourceTree = "<group>"; };
-		74DDBA0E195576A200419934 /* KiiLib_Objective_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiiLib_Objective_C.h; sourceTree = "<group>"; };
-		74DDBA10195576A200419934 /* KiiLib_Objective_C.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiLib_Objective_C.m; sourceTree = "<group>"; };
 		74DDBA16195576A200419934 /* KiiLib-Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KiiLib-Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DDBA17195576A200419934 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		74DDBA1A195576A200419934 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		74DDBA21195576A200419934 /* KiiLib-Objective-CTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiiLib-Objective-CTests-Info.plist"; sourceTree = "<group>"; };
 		74DDBA23195576A200419934 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiiLib_Objective_CTests.m; sourceTree = "<group>"; };
+		74DDBA311955EDC800419934 /* KLAppAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAppAPI.h; sourceTree = "<group>"; };
+		74DDBA331955EF2B00419934 /* KLAppAPIImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAppAPIImpl.h; sourceTree = "<group>"; };
+		74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAppAPIImpl.m; sourceTree = "<group>"; };
+		74DDBA371955F00800419934 /* KLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLUser.h; sourceTree = "<group>"; };
+		74DDBA381955F00800419934 /* KLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +112,8 @@
 		74DDBA0B195576A200419934 /* KiiLib-Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				74DDBA0E195576A200419934 /* KiiLib_Objective_C.h */,
-				74DDBA10195576A200419934 /* KiiLib_Objective_C.m */,
+				74DDBA361955EFDD00419934 /* entities */,
+				74DDBA2F1955ED8E00419934 /* api */,
 				74DDBA0C195576A200419934 /* Supporting Files */,
 			);
 			path = "KiiLib-Objective-C";
@@ -141,6 +143,33 @@
 				74DDBA22195576A200419934 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74DDBA2F1955ED8E00419934 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA301955EDAB00419934 /* impl */,
+				74DDBA311955EDC800419934 /* KLAppAPI.h */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		74DDBA301955EDAB00419934 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA331955EF2B00419934 /* KLAppAPIImpl.h */,
+				74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		74DDBA361955EFDD00419934 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA371955F00800419934 /* KLUser.h */,
+				74DDBA381955F00800419934 /* KLUser.m */,
+			);
+			path = entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DDBA11195576A200419934 /* KiiLib_Objective_C.m in Sources */,
+				74DDBA391955F00800419934 /* KLUser.m in Sources */,
+				74DDBA351955EF2B00419934 /* KLAppAPIImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +435,7 @@
 				74DDBA2B195576A200419934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74DDBA2C195576A200419934 /* Build configuration list for PBXNativeTarget "KiiLib-Objective-CTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +444,7 @@
 				74DDBA2E195576A200419934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
