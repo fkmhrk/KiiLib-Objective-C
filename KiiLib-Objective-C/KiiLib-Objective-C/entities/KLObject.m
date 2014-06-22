@@ -43,4 +43,13 @@
 {
     return [self.json objectForKey:aKey];
 }
+
+- (NSUInteger) count {
+    return self.json.count;
+}
+
+- (NSEnumerator*) keyEnumerator {
+    return self.json.keyEnumerator;
+}
+
 @end
