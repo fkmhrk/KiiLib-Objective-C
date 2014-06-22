@@ -26,6 +26,8 @@
 		74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA5C19568EA300419934 /* KLHTTPClientFactoryImpl.m */; };
 		74DDBA631956A06A00419934 /* KLAPIImplUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA621956A06A00419934 /* KLAPIImplUtils.m */; };
 		74DDBA651956A53C00419934 /* KLUserAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA641956A53C00419934 /* KLUserAPIImplTest.m */; };
+		74DDBA691956AC3F00419934 /* KLBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA681956AC3F00419934 /* KLBucket.m */; };
+		74DDBA6C1956ACA500419934 /* KLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA6B1956ACA500419934 /* KLObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,11 @@
 		74DDBA611956A06A00419934 /* KLAPIImplUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAPIImplUtils.h; sourceTree = "<group>"; };
 		74DDBA621956A06A00419934 /* KLAPIImplUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAPIImplUtils.m; sourceTree = "<group>"; };
 		74DDBA641956A53C00419934 /* KLUserAPIImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLUserAPIImplTest.m; sourceTree = "<group>"; };
+		74DDBA661956AC2C00419934 /* KLObjectAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLObjectAPI.h; sourceTree = "<group>"; };
+		74DDBA671956AC3F00419934 /* KLBucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBucket.h; sourceTree = "<group>"; };
+		74DDBA681956AC3F00419934 /* KLBucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBucket.m; sourceTree = "<group>"; };
+		74DDBA6A1956ACA500419934 /* KLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLObject.h; sourceTree = "<group>"; };
+		74DDBA6B1956ACA500419934 /* KLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +195,7 @@
 				74DDBA301955EDAB00419934 /* impl */,
 				74DDBA311955EDC800419934 /* KLAppAPI.h */,
 				74DDBA3A1955F2A600419934 /* KLUserAPI.h */,
+				74DDBA661956AC2C00419934 /* KLObjectAPI.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -211,6 +219,10 @@
 			children = (
 				74DDBA371955F00800419934 /* KLUser.h */,
 				74DDBA381955F00800419934 /* KLUser.m */,
+				74DDBA671956AC3F00419934 /* KLBucket.h */,
+				74DDBA681956AC3F00419934 /* KLBucket.m */,
+				74DDBA6A1956ACA500419934 /* KLObject.h */,
+				74DDBA6B1956ACA500419934 /* KLObject.m */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -360,7 +372,9 @@
 				74DDBA441956753400419934 /* KLUserAPIImpl.m in Sources */,
 				74DDBA5A19568E6400419934 /* KLHTTPClientImpl.m in Sources */,
 				74DDBA4E195684DB00419934 /* KLHTTPResponse.m in Sources */,
+				74DDBA691956AC3F00419934 /* KLBucket.m in Sources */,
 				74DDBA411955FADE00419934 /* KLRequest.m in Sources */,
+				74DDBA6C1956ACA500419934 /* KLObject.m in Sources */,
 				74DDBA391955F00800419934 /* KLUser.m in Sources */,
 				74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */,
 				74DDBA631956A06A00419934 /* KLAPIImplUtils.m in Sources */,

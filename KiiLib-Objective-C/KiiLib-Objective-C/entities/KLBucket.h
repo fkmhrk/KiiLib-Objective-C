@@ -1,5 +1,5 @@
 //
-//  KLUserAPIImpl+private.h
+//  KLBucket.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KLAppAPIImpl.h"
-#import "KLUserAPIImpl.h"
 
-@interface KLUserAPIImpl(internal)
+@interface KLBucket : NSObject
 
-- (KLUserAPIImpl*) initWithApp:(KLAppAPIImpl*)app;
+- (KLBucket *)initWithName:(NSString *)name;
 
+@property NSString *name;
 @end
-
