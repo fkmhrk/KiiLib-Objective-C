@@ -42,6 +42,8 @@
 		74DDBA811956C1E200419934 /* KLClauseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA801956C1E200419934 /* KLClauseTest.m */; };
 		74DDBA841956C36300419934 /* KLQueryParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA831956C36300419934 /* KLQueryParam.m */; };
 		74DDBA861956C4F800419934 /* KLQueryParamTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA851956C4F800419934 /* KLQueryParamTest.m */; };
+		74DDBA8A1956CD2600419934 /* KLBucketAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA891956CD2600419934 /* KLBucketAPIImpl.m */; };
+		74DDBA8D1956CF9400419934 /* KLBucketAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA8C1956CF9400419934 /* KLBucketAPIImplTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,11 @@
 		74DDBA821956C36300419934 /* KLQueryParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLQueryParam.h; sourceTree = "<group>"; };
 		74DDBA831956C36300419934 /* KLQueryParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLQueryParam.m; sourceTree = "<group>"; };
 		74DDBA851956C4F800419934 /* KLQueryParamTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLQueryParamTest.m; sourceTree = "<group>"; };
+		74DDBA871956CC7C00419934 /* KLBucketAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBucketAPI.h; sourceTree = "<group>"; };
+		74DDBA881956CD2600419934 /* KLBucketAPIImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBucketAPIImpl.h; sourceTree = "<group>"; };
+		74DDBA891956CD2600419934 /* KLBucketAPIImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBucketAPIImpl.m; sourceTree = "<group>"; };
+		74DDBA8B1956CD6A00419934 /* KLBucketAPIImpl+private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLBucketAPIImpl+private.h"; sourceTree = "<group>"; };
+		74DDBA8C1956CF9400419934 /* KLBucketAPIImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBucketAPIImplTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +237,7 @@
 				74DDBA311955EDC800419934 /* KLAppAPI.h */,
 				74DDBA3A1955F2A600419934 /* KLUserAPI.h */,
 				74DDBA661956AC2C00419934 /* KLObjectAPI.h */,
+				74DDBA871956CC7C00419934 /* KLBucketAPI.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -246,6 +254,8 @@
 				74DDBA6E1956AD7F00419934 /* KLObjectAPIImpl.m */,
 				74DDBA3F1955FADE00419934 /* KLRequest.h */,
 				74DDBA401955FADE00419934 /* KLRequest.m */,
+				74DDBA881956CD2600419934 /* KLBucketAPIImpl.h */,
+				74DDBA891956CD2600419934 /* KLBucketAPIImpl.m */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -279,6 +289,7 @@
 		74DDBA3C1955F60200419934 /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				74DDBA8C1956CF9400419934 /* KLBucketAPIImplTest.m */,
 				74DDBA721956B31F00419934 /* KLObjectAPIImplTest.m */,
 				74DDBA641956A53C00419934 /* KLUserAPIImplTest.m */,
 				74DDBA3D1955F63300419934 /* KLAppAPIImplTest.m */,
@@ -293,6 +304,7 @@
 				74DDBA46195676BE00419934 /* KLUserAPIImpl+private.h */,
 				74DDBA611956A06A00419934 /* KLAPIImplUtils.h */,
 				74DDBA621956A06A00419934 /* KLAPIImplUtils.m */,
+				74DDBA8B1956CD6A00419934 /* KLBucketAPIImpl+private.h */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -432,6 +444,7 @@
 				74DDBA6C1956ACA500419934 /* KLObject.m in Sources */,
 				74DDBA391955F00800419934 /* KLUser.m in Sources */,
 				74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */,
+				74DDBA8A1956CD2600419934 /* KLBucketAPIImpl.m in Sources */,
 				74DDBA631956A06A00419934 /* KLAPIImplUtils.m in Sources */,
 				74DDBA351955EF2B00419934 /* KLAppAPIImpl.m in Sources */,
 			);
@@ -447,6 +460,7 @@
 				74DDBA861956C4F800419934 /* KLQueryParamTest.m in Sources */,
 				74DDBA56195688DE00419934 /* KLMockHTTPClientFactory.m in Sources */,
 				74DDBA811956C1E200419934 /* KLClauseTest.m in Sources */,
+				74DDBA8D1956CF9400419934 /* KLBucketAPIImplTest.m in Sources */,
 				74DDBA3E1955F63300419934 /* KLAppAPIImplTest.m in Sources */,
 				74DDBA4919567FDF00419934 /* KLTestConstants.m in Sources */,
 			);

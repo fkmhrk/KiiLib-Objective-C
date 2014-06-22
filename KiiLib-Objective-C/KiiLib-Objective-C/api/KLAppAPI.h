@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "KLUser.h"
 #import "KLUserAPI.h"
+#import "KLBucketAPI.h"
 #import "KLObjectAPI.h"
 
 @protocol KLAppAPI <NSObject>
@@ -20,6 +21,7 @@
 
 @property NSString *accessToken;
 @property id<KLUserAPI> userAPI;
+@property id<KLBucketAPI> bucketAPI;
 @property id<KLObjectAPI> objectAPI;
 
 @end

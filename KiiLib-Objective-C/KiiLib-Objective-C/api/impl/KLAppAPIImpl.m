@@ -8,6 +8,7 @@
 
 #import "KLAppAPIImpl.h"
 #import "KLUserAPIImpl+private.h"
+#import "KLBucketAPIImpl+private.h"
 #import "KLObjectAPIImpl+private.h"
 #import "KLRequest.h"
 
@@ -27,6 +28,7 @@
         self.baseURL = url;
         
         self.userAPI = [[KLUserAPIImpl alloc] initWithApp:self];
+        self.bucketAPI = [[KLBucketAPIImpl alloc] initWithApp:self];
         self.objectAPI = [[KLObjectAPIImpl alloc] initWithApp:self];
     }
     return self;

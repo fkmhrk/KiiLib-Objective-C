@@ -26,5 +26,6 @@
 
 @property NSString *accessToken;
 @property id<KLUserAPI> userAPI;
+@property id<KLBucketAPI> bucketAPI;
 @property id<KLObjectAPI> objectAPI;
 @end
