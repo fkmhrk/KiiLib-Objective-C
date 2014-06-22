@@ -12,11 +12,6 @@
 
 @interface KLAppAPIImpl : NSObject <KLAppAPI>
 
--(KLAppAPIImpl*) initWithSession:(NSURLSession*)session
-                           AppID:(NSString*)appID
-                          appKey:(NSString*)appKey
-                      andBaseURL:(NSString*)url;
-
 -(KLAppAPIImpl*) initWithFactory:(id<KLHTTPClientFactory>)factory
                            AppID:(NSString*)appID
                           appKey:(NSString*)appKey
@@ -31,4 +26,5 @@
 
 @property NSString *accessToken;
 @property id<KLUserAPI> userAPI;
+@property id<KLObjectAPI> objectAPI;
 @end

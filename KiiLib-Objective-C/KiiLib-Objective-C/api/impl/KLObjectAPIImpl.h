@@ -1,5 +1,5 @@
 //
-//  KLUserAPIImpl+private.h
+//  KLObjectAPIImpl.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KLObjectAPI.h"
 #import "KLAppAPIImpl.h"
-#import "KLUserAPIImpl.h"
 
-@interface KLUserAPIImpl(internal)
+@interface KLObjectAPIImpl : NSObject <KLObjectAPI>
 
-- (KLUserAPIImpl*) initWithApp:(KLAppAPIImpl*)app;
+@property (weak) KLAppAPIImpl *app;
 
 @end
-

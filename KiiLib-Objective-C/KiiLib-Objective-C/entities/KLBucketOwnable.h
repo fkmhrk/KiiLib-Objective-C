@@ -1,5 +1,5 @@
 //
-//  KLUserAPIImpl+private.h
+//  KLBucketOwnable.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KLAppAPIImpl.h"
-#import "KLUserAPIImpl.h"
 
-@interface KLUserAPIImpl(internal)
+@protocol KLBucketOwnable <NSObject>
 
-- (KLUserAPIImpl*) initWithApp:(KLAppAPIImpl*)app;
+- (NSString *)getResourcePath;
 
 @end
-

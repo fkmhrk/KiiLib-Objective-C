@@ -1,5 +1,5 @@
 //
-//  KLUserAPIImplTest.m
+//  KLObjectAPIImplTest.m
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -13,15 +13,15 @@
 
 #import "KLHTTPClientFactoryImpl.h"
 
-@interface KLUserAPIImplTest : XCTestCase
+@interface KLObjectAPIImplTest : XCTestCase
 
 @property(atomic) bool done;
-@property(atomic) KLUser *user;
+@property(atomic) KLObject *obj;
 @property(atomic) NSError *error;
 
 @end
 
-@implementation KLUserAPIImplTest
+@implementation KLObjectAPIImplTest
 
 - (void)setUp
 {
@@ -49,30 +49,32 @@
 }
 
 
-- (void) test_0000_SignUp {
+- (void) test_0000_Create {
     KLMockHTTPClientFactory *factory = [[KLMockHTTPClientFactory alloc] init];
     id<KLAppAPI> api = [[KLAppAPIImpl alloc] initWithFactory:factory
                                                        AppID:@"appID"
                                                       appKey:@"appKey"
                                                   andBaseURL:@"https://api-jp.kii.com/api"];
-    NSMutableDictionary *info = [@{@"emailAddress" : @"test@test.com"} mutableCopy];
-    NSString *password = @"password1234";
     
-    KLHTTPResponse *resp = [self createResponse:201 json:@{@"userID" : @"user1234"}];
+    KLBucket *bucket = [[KLBucket alloc] initWithOwner:nil andName:@"board"];
+    NSDictionary *json = @{@"name" : @"fkm", @"score" : @1234 };
+    
+    KLHTTPResponse *resp = [self createResponse:201 json:@{@"objectID" : @"obj1234"}];
     [factory setResponse:resp];
     
     self.done = false;
-    [api.userAPI signUp:info withPassword:password andBlock:^(KLUser *user, NSError *error) {
+    [api.objectAPI create:json bucket:bucket withBlock:^(KLObject *obj, NSError *error) {
         self.done = true;
-        self.user = user;
+        self.obj = obj;
         self.error = error;
     }];
     
     XCTAssertTrue(self.done);
-    XCTAssertNotNil(self.user, @"user must not be nil");
+    XCTAssertNotNil(self.obj, @"obj must not be nil");
     XCTAssertNil(self.error, @"error happends");
     
-    XCTAssertEqualObjects(self.user.id, @"user1234", @"user ID must be user1234");
+    XCTAssertEqualObjects(self.obj.id, @"obj1234", @"unexpected object ID");
+    XCTAssertEqualObjects(self.obj[@"name"], @"fkm", @"unexpected name field");
 }
 
 @end
