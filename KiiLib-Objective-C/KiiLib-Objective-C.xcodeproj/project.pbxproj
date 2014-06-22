@@ -44,6 +44,9 @@
 		74DDBA861956C4F800419934 /* KLQueryParamTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA851956C4F800419934 /* KLQueryParamTest.m */; };
 		74DDBA8A1956CD2600419934 /* KLBucketAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA891956CD2600419934 /* KLBucketAPIImpl.m */; };
 		74DDBA8D1956CF9400419934 /* KLBucketAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA8C1956CF9400419934 /* KLBucketAPIImplTest.m */; };
+		74DDBA8E1956D79F00419934 /* KLClause.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA7C1956BD9F00419934 /* KLClause.h */; };
+		74DDBA8F1956D79F00419934 /* KLQueryParam.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA821956C36300419934 /* KLQueryParam.h */; };
+		74DDBA901956D7AD00419934 /* KLBucketAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA871956CC7C00419934 /* KLBucketAPI.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				74DDBA901956D7AD00419934 /* KLBucketAPI.h in CopyFiles */,
+				74DDBA8E1956D79F00419934 /* KLClause.h in CopyFiles */,
+				74DDBA8F1956D79F00419934 /* KLQueryParam.h in CopyFiles */,
 				74DDBA791956BAD000419934 /* KLAppAPI.h in CopyFiles */,
 				74DDBA7A1956BAD000419934 /* KLUserAPI.h in CopyFiles */,
 				74DDBA7B1956BAD000419934 /* KLObjectAPI.h in CopyFiles */,
