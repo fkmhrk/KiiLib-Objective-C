@@ -116,6 +116,7 @@
         }
         NSString *userID = json[@"id"];
         NSString *token = json[@"access_token"];
+        self.accessToken = token;
         KLUser *user = [[KLUser alloc] initWithID:userID];
         block(token, user, nil);
     }];
