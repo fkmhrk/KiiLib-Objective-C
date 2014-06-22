@@ -50,7 +50,33 @@
 }
 
 
-- (void) test_0000_Login_Twitter {
+- (void) test_0000_Login_Facebook {
+    KLMockHTTPClientFactory *factory = [[KLMockHTTPClientFactory alloc] init];
+    id<KLAppAPI> api = [[KLAppAPIImpl alloc] initWithFactory:factory
+                                                       AppID:@"appID"
+                                                      appKey:@"appKey"
+                                                  andBaseURL:@"https://api-jp.kii.com/api"];
+    KLHTTPResponse *resp = [self createResponse:201 json:@{@"id" : @"user1234", @"access_token" : @"token1234"}];
+    [factory setResponse:resp];
+    
+    self.done = false;
+    [api loginFacebook:@"accessToken" withBlock:^(NSString *token, KLUser *user, NSError *error) {
+        self.done = true;
+        self.token = token;
+        self.user = user;
+        self.error = error;
+    }];
+    
+    XCTAssertTrue(self.done);
+    XCTAssertNotNil(self.user, @"user must not be nil");
+    XCTAssertNotNil(self.token, @"token must not be nil");
+    XCTAssertNil(self.error, @"error happends");
+    
+    XCTAssertEqualObjects(self.token, @"token1234", @"unexpected access token");
+    XCTAssertEqualObjects(self.user.id, @"user1234", @"unexpected user ID");
+}
+
+- (void) test_0100_Login_Twitter {
     KLMockHTTPClientFactory *factory = [[KLMockHTTPClientFactory alloc] init];
     id<KLAppAPI> api = [[KLAppAPIImpl alloc] initWithFactory:factory
                                                        AppID:@"appID"

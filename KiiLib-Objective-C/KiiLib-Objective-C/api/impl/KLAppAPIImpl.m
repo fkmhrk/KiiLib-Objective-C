@@ -51,7 +51,13 @@
 - (void) loginFacebook:(NSString*)token
              withBlock:(void (^)(NSString *token, KLUser *user, NSError *error))block
 {
+    NSString *url = [NSString stringWithFormat:@"%@/apps/%@/integration/facebook", self.baseURL, self.appID];
+    NSDictionary *json = @{@"accessToken" : token};
     
+    [self loginSNSWithURL:url
+                     json:json
+              contentType:@"application/vnd.kii.AuthTokenFacebookRequest+json"
+                 andBlock:block];
 }
 
 - (void) loginTwitter:(NSString*)accessToken
@@ -63,7 +69,18 @@
                            @"accessToken" : accessToken,
                            @"accessTokenSecret" : accessTokenSecret
                            };
+    
+    [self loginSNSWithURL:url
+                     json:json
+              contentType:@"application/vnd.kii.AuthTokenTwitterRequest+json"
+                 andBlock:block];
+}
 
+- (void) loginSNSWithURL:(NSString *)url
+                    json:(NSDictionary *)json
+             contentType:(NSString *)contentType
+                andBlock:(void (^)(NSString *token, KLUser *user, NSError *error))block
+{
     id<KLHTTPClient> client = [self.factory newClient];
     [KLAPIImplUtils initClient:client
                            url:url
@@ -79,8 +96,9 @@
         block(nil, nil, error);
         return;
     }
-    [client setHeaderWithKey:@"content-type" andValue:@"application/vnd.kii.AuthTokenTwitterRequest+json"];
+    [client setHeaderWithKey:@"content-type" andValue:contentType];
     [client setData:data];
+
     
     [client sendRequest:^(KLHTTPResponse *response, NSError *error) {
         if (error != nil) {
@@ -101,7 +119,7 @@
         KLUser *user = [[KLUser alloc] initWithID:userID];
         block(token, user, nil);
     }];
-
 }
+
 
 @end
