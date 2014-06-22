@@ -29,5 +29,6 @@
 @property NSString *appKey;
 @property NSString *baseURL;
 
+@property NSString *accessToken;
 @property id<KLUserAPI> userAPI;
 @end

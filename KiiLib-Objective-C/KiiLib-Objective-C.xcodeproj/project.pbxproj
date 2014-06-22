@@ -25,6 +25,7 @@
 		74DDBA56195688DE00419934 /* KLMockHTTPClientFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA55195688DE00419934 /* KLMockHTTPClientFactory.m */; };
 		74DDBA5A19568E6400419934 /* KLHTTPClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA5919568E6400419934 /* KLHTTPClientImpl.m */; };
 		74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA5C19568EA300419934 /* KLHTTPClientFactoryImpl.m */; };
+		74DDBA631956A06A00419934 /* KLAPIImplUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA621956A06A00419934 /* KLAPIImplUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		74DDBA5919568E6400419934 /* KLHTTPClientImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLHTTPClientImpl.m; sourceTree = "<group>"; };
 		74DDBA5B19568EA300419934 /* KLHTTPClientFactoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLHTTPClientFactoryImpl.h; sourceTree = "<group>"; };
 		74DDBA5C19568EA300419934 /* KLHTTPClientFactoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLHTTPClientFactoryImpl.m; sourceTree = "<group>"; };
+		74DDBA611956A06A00419934 /* KLAPIImplUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLAPIImplUtils.h; sourceTree = "<group>"; };
+		74DDBA621956A06A00419934 /* KLAPIImplUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAPIImplUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				74DDBA46195676BE00419934 /* KLUserAPIImpl+private.h */,
+				74DDBA611956A06A00419934 /* KLAPIImplUtils.h */,
+				74DDBA621956A06A00419934 /* KLAPIImplUtils.m */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				74DDBA411955FADE00419934 /* KLRequest.m in Sources */,
 				74DDBA391955F00800419934 /* KLUser.m in Sources */,
 				74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */,
+				74DDBA631956A06A00419934 /* KLAPIImplUtils.m in Sources */,
 				74DDBA351955EF2B00419934 /* KLAppAPIImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

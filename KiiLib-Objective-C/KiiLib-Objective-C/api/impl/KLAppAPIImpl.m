@@ -57,6 +57,11 @@
           tokenSecret:(NSString*)accessTokenSecret
             withBlock:(void (^)(NSString *token, KLUser *user, NSError *error))block
 {
+//    '{"accessToken": "{ACCESS_TOKEN_PROVIDED_BY_TWITTER}","accessTokenSecret": "{ACCESS_SECRET_PROVIDED_BY_TWITTER}"}';
+    NSDictionary *json = @{
+                           @"accessToken" : accessToken,
+                           @"accessTokenSecret" : accessTokenSecret
+                           };
     
 }
 
