@@ -9,5 +9,22 @@
 #import "KLUser.h"
 
 @implementation KLUser
+- (KLUser *)initWithID:(NSString *)id
+{
+    self = [super init];
+    if (self != nil) {
+        self.id = id;
+    }
+    return self;
+}
+
+- (KLUser *)initWithJSON:(NSDictionary *)json
+{
+    self = [super init];
+    if (self != nil) {
+        self.id = json[@"userID"];
+    }
+    return self;
+}
 
 @end

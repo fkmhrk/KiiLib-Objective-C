@@ -8,7 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import "KLAppAPI.h"
+#import "KLHTTPClientFactory.h"
 
 @interface KLAppAPIImpl : NSObject <KLAppAPI>
 
+-(KLAppAPIImpl*) initWithSession:(NSURLSession*)session
+                           AppID:(NSString*)appID
+                          appKey:(NSString*)appKey
+                      andBaseURL:(NSString*)url;
+
+-(KLAppAPIImpl*) initWithFactory:(id<KLHTTPClientFactory>)factory
+                           AppID:(NSString*)appID
+                          appKey:(NSString*)appKey
+                      andBaseURL:(NSString*)url;
+
+
+@property id<KLHTTPClientFactory> factory;
+@property NSURLSession *session;
+@property NSString *appID;
+@property NSString *appKey;
+@property NSString *baseURL;
+
+@property id<KLUserAPI> userAPI;
 @end

@@ -1,5 +1,5 @@
 //
-//  KLUser.h
+//  KLHTTPResponse.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KLUser : NSMutableDictionary
+@interface KLHTTPResponse : NSObject
 
-- (KLUser *)initWithID:(NSString *)id;
+@property int status;
+@property NSData *data;
 
-- (KLUser *)initWithJSON:(NSDictionary *)json;
+- (NSDictionary *)getHeaders;
 
-@property NSString *id;
+- (NSDictionary *)getBodyAsJSON;
+
 @end

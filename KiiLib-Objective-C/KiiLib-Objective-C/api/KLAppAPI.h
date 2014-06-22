@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KLUser.h"
+#import "KLUserAPI.h"
 
 @protocol KLAppAPI <NSObject>
 
@@ -16,5 +17,6 @@
 - (void) loginTwitter:(NSString*)accessToken tokenSecret:(NSString*)accessTokenSecret
             withBlock:(void (^)(NSString *token, KLUser *user, NSError *error))block;
 
+@property id<KLUserAPI> userAPI;
 
 @end

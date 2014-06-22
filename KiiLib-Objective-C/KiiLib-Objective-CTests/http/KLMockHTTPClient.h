@@ -1,5 +1,5 @@
 //
-//  KLUser.h
+//  KLMockHTTPClient.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KLHTTPClient.h"
 
-@interface KLUser : NSMutableDictionary
+@interface KLMockHTTPClient : NSObject <KLHTTPClient>
 
-- (KLUser *)initWithID:(NSString *)id;
-
-- (KLUser *)initWithJSON:(NSDictionary *)json;
-
-@property NSString *id;
+@property KLHTTPResponse *response;
 @end

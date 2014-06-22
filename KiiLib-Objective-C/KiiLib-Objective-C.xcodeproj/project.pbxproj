@@ -16,6 +16,15 @@
 		74DDBA26195576A200419934 /* KiiLib_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */; };
 		74DDBA351955EF2B00419934 /* KLAppAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */; };
 		74DDBA391955F00800419934 /* KLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA381955F00800419934 /* KLUser.m */; };
+		74DDBA3E1955F63300419934 /* KLAppAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA3D1955F63300419934 /* KLAppAPIImplTest.m */; };
+		74DDBA411955FADE00419934 /* KLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA401955FADE00419934 /* KLRequest.m */; };
+		74DDBA441956753400419934 /* KLUserAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA431956753400419934 /* KLUserAPIImpl.m */; };
+		74DDBA4919567FDF00419934 /* KLTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA4819567FDF00419934 /* KLTestConstants.m */; };
+		74DDBA4E195684DB00419934 /* KLHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA4D195684DB00419934 /* KLHTTPResponse.m */; };
+		74DDBA531956886300419934 /* KLMockHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA521956886300419934 /* KLMockHTTPClient.m */; };
+		74DDBA56195688DE00419934 /* KLMockHTTPClientFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA55195688DE00419934 /* KLMockHTTPClientFactory.m */; };
+		74DDBA5A19568E6400419934 /* KLHTTPClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA5919568E6400419934 /* KLHTTPClientImpl.m */; };
+		74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA5C19568EA300419934 /* KLHTTPClientFactoryImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,27 @@
 		74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAppAPIImpl.m; sourceTree = "<group>"; };
 		74DDBA371955F00800419934 /* KLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLUser.h; sourceTree = "<group>"; };
 		74DDBA381955F00800419934 /* KLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLUser.m; sourceTree = "<group>"; };
+		74DDBA3A1955F2A600419934 /* KLUserAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLUserAPI.h; sourceTree = "<group>"; };
+		74DDBA3D1955F63300419934 /* KLAppAPIImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLAppAPIImplTest.m; sourceTree = "<group>"; };
+		74DDBA3F1955FADE00419934 /* KLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLRequest.h; sourceTree = "<group>"; };
+		74DDBA401955FADE00419934 /* KLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLRequest.m; sourceTree = "<group>"; };
+		74DDBA421956753400419934 /* KLUserAPIImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLUserAPIImpl.h; sourceTree = "<group>"; };
+		74DDBA431956753400419934 /* KLUserAPIImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLUserAPIImpl.m; sourceTree = "<group>"; };
+		74DDBA46195676BE00419934 /* KLUserAPIImpl+private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLUserAPIImpl+private.h"; sourceTree = "<group>"; };
+		74DDBA4719567F8C00419934 /* KLTestConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTestConstants.h; sourceTree = "<group>"; };
+		74DDBA4819567FDF00419934 /* KLTestConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTestConstants.m; sourceTree = "<group>"; };
+		74DDBA4B1956841600419934 /* KLHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLHTTPClient.h; sourceTree = "<group>"; };
+		74DDBA4C195684DB00419934 /* KLHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLHTTPResponse.h; sourceTree = "<group>"; };
+		74DDBA4D195684DB00419934 /* KLHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLHTTPResponse.m; sourceTree = "<group>"; };
+		74DDBA4F1956854300419934 /* KLHTTPClientFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLHTTPClientFactory.h; sourceTree = "<group>"; };
+		74DDBA511956886300419934 /* KLMockHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMockHTTPClient.h; sourceTree = "<group>"; };
+		74DDBA521956886300419934 /* KLMockHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMockHTTPClient.m; sourceTree = "<group>"; };
+		74DDBA54195688DE00419934 /* KLMockHTTPClientFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMockHTTPClientFactory.h; sourceTree = "<group>"; };
+		74DDBA55195688DE00419934 /* KLMockHTTPClientFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMockHTTPClientFactory.m; sourceTree = "<group>"; };
+		74DDBA5819568E6400419934 /* KLHTTPClientImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLHTTPClientImpl.h; sourceTree = "<group>"; };
+		74DDBA5919568E6400419934 /* KLHTTPClientImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLHTTPClientImpl.m; sourceTree = "<group>"; };
+		74DDBA5B19568EA300419934 /* KLHTTPClientFactoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLHTTPClientFactoryImpl.h; sourceTree = "<group>"; };
+		74DDBA5C19568EA300419934 /* KLHTTPClientFactoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLHTTPClientFactoryImpl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +142,7 @@
 		74DDBA0B195576A200419934 /* KiiLib-Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				74DDBA4A195683CC00419934 /* http */,
 				74DDBA361955EFDD00419934 /* entities */,
 				74DDBA2F1955ED8E00419934 /* api */,
 				74DDBA0C195576A200419934 /* Supporting Files */,
@@ -130,8 +161,12 @@
 		74DDBA1F195576A200419934 /* KiiLib-Objective-CTests */ = {
 			isa = PBXGroup;
 			children = (
+				74DDBA501956884300419934 /* http */,
+				74DDBA3B1955F5FA00419934 /* api */,
 				74DDBA25195576A200419934 /* KiiLib_Objective_CTests.m */,
 				74DDBA20195576A200419934 /* Supporting Files */,
+				74DDBA4719567F8C00419934 /* KLTestConstants.h */,
+				74DDBA4819567FDF00419934 /* KLTestConstants.m */,
 			);
 			path = "KiiLib-Objective-CTests";
 			sourceTree = "<group>";
@@ -150,6 +185,7 @@
 			children = (
 				74DDBA301955EDAB00419934 /* impl */,
 				74DDBA311955EDC800419934 /* KLAppAPI.h */,
+				74DDBA3A1955F2A600419934 /* KLUserAPI.h */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -157,8 +193,13 @@
 		74DDBA301955EDAB00419934 /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				74DDBA451956768100419934 /* private */,
 				74DDBA331955EF2B00419934 /* KLAppAPIImpl.h */,
 				74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */,
+				74DDBA421956753400419934 /* KLUserAPIImpl.h */,
+				74DDBA431956753400419934 /* KLUserAPIImpl.m */,
+				74DDBA3F1955FADE00419934 /* KLRequest.h */,
+				74DDBA401955FADE00419934 /* KLRequest.m */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -170,6 +211,64 @@
 				74DDBA381955F00800419934 /* KLUser.m */,
 			);
 			path = entities;
+			sourceTree = "<group>";
+		};
+		74DDBA3B1955F5FA00419934 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA3C1955F60200419934 /* impl */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		74DDBA3C1955F60200419934 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA3D1955F63300419934 /* KLAppAPIImplTest.m */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		74DDBA451956768100419934 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA46195676BE00419934 /* KLUserAPIImpl+private.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		74DDBA4A195683CC00419934 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA5719568E4B00419934 /* impl */,
+				74DDBA4B1956841600419934 /* KLHTTPClient.h */,
+				74DDBA4C195684DB00419934 /* KLHTTPResponse.h */,
+				74DDBA4D195684DB00419934 /* KLHTTPResponse.m */,
+				74DDBA4F1956854300419934 /* KLHTTPClientFactory.h */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		74DDBA501956884300419934 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA511956886300419934 /* KLMockHTTPClient.h */,
+				74DDBA521956886300419934 /* KLMockHTTPClient.m */,
+				74DDBA54195688DE00419934 /* KLMockHTTPClientFactory.h */,
+				74DDBA55195688DE00419934 /* KLMockHTTPClientFactory.m */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		74DDBA5719568E4B00419934 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				74DDBA5819568E6400419934 /* KLHTTPClientImpl.h */,
+				74DDBA5919568E6400419934 /* KLHTTPClientImpl.m */,
+				74DDBA5B19568EA300419934 /* KLHTTPClientFactoryImpl.h */,
+				74DDBA5C19568EA300419934 /* KLHTTPClientFactoryImpl.m */,
+			);
+			path = impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DDBA441956753400419934 /* KLUserAPIImpl.m in Sources */,
+				74DDBA5A19568E6400419934 /* KLHTTPClientImpl.m in Sources */,
+				74DDBA4E195684DB00419934 /* KLHTTPResponse.m in Sources */,
+				74DDBA411955FADE00419934 /* KLRequest.m in Sources */,
 				74DDBA391955F00800419934 /* KLUser.m in Sources */,
+				74DDBA5D19568EA300419934 /* KLHTTPClientFactoryImpl.m in Sources */,
 				74DDBA351955EF2B00419934 /* KLAppAPIImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74DDBA26195576A200419934 /* KiiLib_Objective_CTests.m in Sources */,
+				74DDBA531956886300419934 /* KLMockHTTPClient.m in Sources */,
+				74DDBA56195688DE00419934 /* KLMockHTTPClientFactory.m in Sources */,
+				74DDBA3E1955F63300419934 /* KLAppAPIImplTest.m in Sources */,
+				74DDBA4919567FDF00419934 /* KLTestConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
