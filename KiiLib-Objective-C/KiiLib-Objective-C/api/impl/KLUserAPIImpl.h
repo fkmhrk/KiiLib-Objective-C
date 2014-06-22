@@ -1,5 +1,5 @@
 //
-//  KLUser.h
+//  KLUserAPIImpl.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KLUserAPI.h"
+#import "KLAppAPIImpl.h"
 
-@interface KLUser : NSMutableDictionary
 
-- (KLUser *)initWithID:(NSString *)id;
+@interface KLUserAPIImpl : NSObject <KLUserAPI>
 
-- (KLUser *)initWithJSON:(NSDictionary *)json;
+@property (weak) KLAppAPIImpl *app;
 
-@property NSString *id;
 @end

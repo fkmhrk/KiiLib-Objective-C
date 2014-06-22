@@ -7,8 +7,45 @@
 //
 
 #import "KLAppAPIImpl.h"
+#import "KLUserAPIImpl+private.h"
+#import "KLRequest.h"
 
 @implementation KLAppAPIImpl
+
+-(KLAppAPIImpl*) initWithSession:(NSURLSession *)session
+                           AppID:(NSString *)appID
+                          appKey:(NSString *)appKey
+                      andBaseURL:(NSString *)url
+{
+    self = [super init];
+    if (self != nil) {
+        self.session = session;
+        self.appID = appID;
+        self.appKey = appKey;
+        self.baseURL = url;
+        
+        self.userAPI = [[KLUserAPIImpl alloc] initWithApp:self];
+    }
+    return self;
+}
+
+-(KLAppAPIImpl*) initWithFactory:(id<KLHTTPClientFactory>)factory
+                           AppID:(NSString*)appID
+                          appKey:(NSString*)appKey
+                      andBaseURL:(NSString*)url
+{
+    self = [super init];
+    if (self != nil) {
+        self.factory = factory;
+        self.appID = appID;
+        self.appKey = appKey;
+        self.baseURL = url;
+        
+        self.userAPI = [[KLUserAPIImpl alloc] initWithApp:self];
+    }
+    return self;
+}
+
 
 - (void) loginFacebook:(NSString*)token
              withBlock:(void (^)(NSString *token, KLUser *user, NSError *error))block

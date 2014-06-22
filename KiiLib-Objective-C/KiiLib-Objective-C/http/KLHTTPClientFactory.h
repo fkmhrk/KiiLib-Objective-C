@@ -1,5 +1,5 @@
 //
-//  KLUser.h
+//  KLHTTPClientFactory.h
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KLHTTPClient.h"
 
-@interface KLUser : NSMutableDictionary
+@protocol KLHTTPClientFactory <NSObject>
 
-- (KLUser *)initWithID:(NSString *)id;
+- (id<KLHTTPClient>) newClient;
 
-- (KLUser *)initWithJSON:(NSDictionary *)json;
-
-@property NSString *id;
 @end
