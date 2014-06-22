@@ -11,6 +11,7 @@
 #import "KLAppAPIImpl.h"
 #import "KLRequest.h"
 
+#import "KLAPIImplUtils.h"
 @implementation KLUserAPIImpl
 
 - (KLUserAPIImpl*) initWithApp:(KLAppAPIImpl*)app
@@ -31,14 +32,18 @@
     
     NSString *url = [NSString stringWithFormat:@"%@/apps/%@/users", self.app.baseURL, self.app.appID];
     id<KLHTTPClient> client = [self.app.factory newClient];
-    [client setURL:url];
-    [client setMethod:@"POST"];
-    [client setHeaderWithKey:@"x-kii-appid" andValue:self.app.appID];
-    [client setHeaderWithKey:@"x-kii-appkey" andValue:self.app.appKey];
+    [KLAPIImplUtils initClient:client
+                           url:url
+                        method:@"POST"
+                         appID:self.app.appID
+                        appKey:self.app.appKey
+                       baseURL:self.app.baseURL
+                      andToken:self.app.accessToken];
     
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:info2 options:NSJSONWritingPrettyPrinted error:&error];
     if (error != nil) {
+        block(nil, error);
         return;
     }
     [client setHeaderWithKey:@"content-type" andValue:@"application/json"];
@@ -54,7 +59,10 @@
             return;
         }
         NSDictionary *json = [response getBodyAsJSON];
-        NSLog(@"body is %@", json);
+        if (json == nil) {
+            block(nil, [NSError errorWithDomain:@"" code:response.status userInfo:nil]);
+            return;
+        }
         KLUser *user = [[KLUser alloc] initWithJSON:json];
         block(user, nil);
     }];

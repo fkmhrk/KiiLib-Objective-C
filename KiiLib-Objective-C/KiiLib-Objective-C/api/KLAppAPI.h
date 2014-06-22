@@ -17,6 +17,7 @@
 - (void) loginTwitter:(NSString*)accessToken tokenSecret:(NSString*)accessTokenSecret
             withBlock:(void (^)(NSString *token, KLUser *user, NSError *error))block;
 
+@property NSString *accessToken;
 @property id<KLUserAPI> userAPI;
 
 @end
