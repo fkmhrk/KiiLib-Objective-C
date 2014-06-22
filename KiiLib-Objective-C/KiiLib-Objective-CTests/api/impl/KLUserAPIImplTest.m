@@ -13,16 +13,15 @@
 
 #import "KLHTTPClientFactoryImpl.h"
 
-@interface KLAppAPIImplTest : XCTestCase
+@interface KLUserAPIImplTest : XCTestCase
 
 @property(atomic) bool done;
-@property(atomic) NSString *token;
 @property(atomic) KLUser *user;
 @property(atomic) NSError *error;
 
 @end
 
-@implementation KLAppAPIImplTest
+@implementation KLUserAPIImplTest
 
 - (void)setUp
 {
@@ -50,30 +49,30 @@
 }
 
 
-- (void) test_0000_Login_Twitter {
+- (void) test_0000_SignUp {
     KLMockHTTPClientFactory *factory = [[KLMockHTTPClientFactory alloc] init];
     id<KLAppAPI> api = [[KLAppAPIImpl alloc] initWithFactory:factory
                                                        AppID:@"appID"
                                                       appKey:@"appKey"
                                                   andBaseURL:@"https://api-jp.kii.com/api"];
-    KLHTTPResponse *resp = [self createResponse:201 json:@{@"id" : @"user1234", @"access_token" : @"token1234"}];
+    NSMutableDictionary *info = [@{@"emailAddress" : @"test@test.com"} mutableCopy];
+    NSString *password = @"password1234";
+    
+    KLHTTPResponse *resp = [self createResponse:201 json:@{@"userID" : @"user1234"}];
     [factory setResponse:resp];
     
     self.done = false;
-    [api loginTwitter:@"accessToken" tokenSecret:@"secret" withBlock:^(NSString *token, KLUser *user, NSError *error) {
+    [api.userAPI signUp:info withPassword:password andBlock:^(KLUser *user, NSError *error) {
         self.done = true;
-        self.token = token;
         self.user = user;
         self.error = error;
     }];
     
     XCTAssertTrue(self.done);
     XCTAssertNotNil(self.user, @"user must not be nil");
-    XCTAssertNotNil(self.token, @"token must not be nil");
     XCTAssertNil(self.error, @"error happends");
     
-    XCTAssertEqualObjects(self.token, @"token1234", @"unexpected access token");
-    XCTAssertEqualObjects(self.user.id, @"user1234", @"unexpected user ID");
+    XCTAssertEqualObjects(self.user.id, @"user1234", @"user ID must be user1234");
 }
 
 @end
