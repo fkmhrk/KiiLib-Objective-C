@@ -30,6 +30,14 @@
 		74DDBA6C1956ACA500419934 /* KLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA6B1956ACA500419934 /* KLObject.m */; };
 		74DDBA6F1956AD7F00419934 /* KLObjectAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA6E1956AD7F00419934 /* KLObjectAPIImpl.m */; };
 		74DDBA731956B31F00419934 /* KLObjectAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA721956B31F00419934 /* KLObjectAPIImplTest.m */; };
+		74DDBA741956BAB900419934 /* KLHTTPClientFactoryImpl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA5B19568EA300419934 /* KLHTTPClientFactoryImpl.h */; };
+		74DDBA751956BAC300419934 /* KLUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA371955F00800419934 /* KLUser.h */; };
+		74DDBA761956BAC300419934 /* KLBucket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA671956AC3F00419934 /* KLBucket.h */; };
+		74DDBA771956BAC300419934 /* KLObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA6A1956ACA500419934 /* KLObject.h */; };
+		74DDBA781956BAC300419934 /* KLBucketOwnable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA711956AFC800419934 /* KLBucketOwnable.h */; };
+		74DDBA791956BAD000419934 /* KLAppAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA311955EDC800419934 /* KLAppAPI.h */; };
+		74DDBA7A1956BAD000419934 /* KLUserAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA3A1955F2A600419934 /* KLUserAPI.h */; };
+		74DDBA7B1956BAD000419934 /* KLObjectAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74DDBA661956AC2C00419934 /* KLObjectAPI.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				74DDBA791956BAD000419934 /* KLAppAPI.h in CopyFiles */,
+				74DDBA7A1956BAD000419934 /* KLUserAPI.h in CopyFiles */,
+				74DDBA7B1956BAD000419934 /* KLObjectAPI.h in CopyFiles */,
+				74DDBA751956BAC300419934 /* KLUser.h in CopyFiles */,
+				74DDBA761956BAC300419934 /* KLBucket.h in CopyFiles */,
+				74DDBA771956BAC300419934 /* KLObject.h in CopyFiles */,
+				74DDBA781956BAC300419934 /* KLBucketOwnable.h in CopyFiles */,
+				74DDBA741956BAB900419934 /* KLHTTPClientFactoryImpl.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +517,13 @@
 		74DDBA2A195576A200419934 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/KiiLib_Objective_C.dst;
+				DSTROOT = "${BUILT_PRODUCTS_DIR}";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiiLib-Objective-C/KiiLib-Objective-C-Prefix.pch";
+				INSTALL_PATH = "${BUILT_PRODUCTS_DIR}";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -513,11 +531,13 @@
 		74DDBA2B195576A200419934 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/KiiLib_Objective_C.dst;
+				DSTROOT = "${BUILT_PRODUCTS_DIR}";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiiLib-Objective-C/KiiLib-Objective-C-Prefix.pch";
+				INSTALL_PATH = "${BUILT_PRODUCTS_DIR}";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "${TARGET_NAME}";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
