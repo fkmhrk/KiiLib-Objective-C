@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KLBucketOwnable.h"
 
 @interface KLBucket : NSObject
 
-- (KLBucket *)initWithName:(NSString *)name;
+- (KLBucket *)initWithOwner:(id<KLBucketOwnable>)owner andName:(NSString *)name;
 
+- (NSString *)getResourcePath;
+
+@property id<KLBucketOwnable> owner;
 @property NSString *name;
 @end

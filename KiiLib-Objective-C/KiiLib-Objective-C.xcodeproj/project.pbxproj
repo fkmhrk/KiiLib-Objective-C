@@ -28,6 +28,8 @@
 		74DDBA651956A53C00419934 /* KLUserAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA641956A53C00419934 /* KLUserAPIImplTest.m */; };
 		74DDBA691956AC3F00419934 /* KLBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA681956AC3F00419934 /* KLBucket.m */; };
 		74DDBA6C1956ACA500419934 /* KLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA6B1956ACA500419934 /* KLObject.m */; };
+		74DDBA6F1956AD7F00419934 /* KLObjectAPIImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA6E1956AD7F00419934 /* KLObjectAPIImpl.m */; };
+		74DDBA731956B31F00419934 /* KLObjectAPIImplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DDBA721956B31F00419934 /* KLObjectAPIImplTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,11 @@
 		74DDBA681956AC3F00419934 /* KLBucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBucket.m; sourceTree = "<group>"; };
 		74DDBA6A1956ACA500419934 /* KLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLObject.h; sourceTree = "<group>"; };
 		74DDBA6B1956ACA500419934 /* KLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLObject.m; sourceTree = "<group>"; };
+		74DDBA6D1956AD7F00419934 /* KLObjectAPIImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLObjectAPIImpl.h; sourceTree = "<group>"; };
+		74DDBA6E1956AD7F00419934 /* KLObjectAPIImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLObjectAPIImpl.m; sourceTree = "<group>"; };
+		74DDBA701956ADCA00419934 /* KLObjectAPIImpl+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KLObjectAPIImpl+private.h"; sourceTree = "<group>"; };
+		74DDBA711956AFC800419934 /* KLBucketOwnable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLBucketOwnable.h; sourceTree = "<group>"; };
+		74DDBA721956B31F00419934 /* KLObjectAPIImplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLObjectAPIImplTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +215,8 @@
 				74DDBA341955EF2B00419934 /* KLAppAPIImpl.m */,
 				74DDBA421956753400419934 /* KLUserAPIImpl.h */,
 				74DDBA431956753400419934 /* KLUserAPIImpl.m */,
+				74DDBA6D1956AD7F00419934 /* KLObjectAPIImpl.h */,
+				74DDBA6E1956AD7F00419934 /* KLObjectAPIImpl.m */,
 				74DDBA3F1955FADE00419934 /* KLRequest.h */,
 				74DDBA401955FADE00419934 /* KLRequest.m */,
 			);
@@ -223,6 +232,7 @@
 				74DDBA681956AC3F00419934 /* KLBucket.m */,
 				74DDBA6A1956ACA500419934 /* KLObject.h */,
 				74DDBA6B1956ACA500419934 /* KLObject.m */,
+				74DDBA711956AFC800419934 /* KLBucketOwnable.h */,
 			);
 			path = entities;
 			sourceTree = "<group>";
@@ -238,6 +248,7 @@
 		74DDBA3C1955F60200419934 /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				74DDBA721956B31F00419934 /* KLObjectAPIImplTest.m */,
 				74DDBA641956A53C00419934 /* KLUserAPIImplTest.m */,
 				74DDBA3D1955F63300419934 /* KLAppAPIImplTest.m */,
 			);
@@ -247,6 +258,7 @@
 		74DDBA451956768100419934 /* private */ = {
 			isa = PBXGroup;
 			children = (
+				74DDBA701956ADCA00419934 /* KLObjectAPIImpl+private.h */,
 				74DDBA46195676BE00419934 /* KLUserAPIImpl+private.h */,
 				74DDBA611956A06A00419934 /* KLAPIImplUtils.h */,
 				74DDBA621956A06A00419934 /* KLAPIImplUtils.m */,
@@ -373,6 +385,7 @@
 				74DDBA5A19568E6400419934 /* KLHTTPClientImpl.m in Sources */,
 				74DDBA4E195684DB00419934 /* KLHTTPResponse.m in Sources */,
 				74DDBA691956AC3F00419934 /* KLBucket.m in Sources */,
+				74DDBA6F1956AD7F00419934 /* KLObjectAPIImpl.m in Sources */,
 				74DDBA411955FADE00419934 /* KLRequest.m in Sources */,
 				74DDBA6C1956ACA500419934 /* KLObject.m in Sources */,
 				74DDBA391955F00800419934 /* KLUser.m in Sources */,
@@ -386,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DDBA731956B31F00419934 /* KLObjectAPIImplTest.m in Sources */,
 				74DDBA651956A53C00419934 /* KLUserAPIImplTest.m in Sources */,
 				74DDBA531956886300419934 /* KLMockHTTPClient.m in Sources */,
 				74DDBA56195688DE00419934 /* KLMockHTTPClientFactory.m in Sources */,

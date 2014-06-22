@@ -1,20 +1,19 @@
 //
-//  KLUserAPIImpl.m
+//  KLObjectAPIImpl.m
 //  KiiLib-Objective-C
 //
 //  Created by fkm on 2014/06/22.
 //  Copyright (c) 2014年 fkmsoft.jp. All rights reserved.
 //
 
-#import "KLUserAPIImpl.h"
-#import "KLUserAPIImpl+private.h"
-#import "KLAppAPIImpl.h"
-#import "KLRequest.h"
+#import "KLObjectAPIImpl.h"
+#import "KLHTTPClient.h"
 
 #import "KLAPIImplUtils.h"
-@implementation KLUserAPIImpl
 
-- (KLUserAPIImpl*) initWithApp:(KLAppAPIImpl*)app
+@implementation KLObjectAPIImpl
+
+- (KLObjectAPIImpl*) initWithApp:(KLAppAPIImpl*)app
 {
     self = [super init];
     if (self != nil) {
@@ -23,14 +22,13 @@
     return self;
 }
 
-- (void) signUp:(NSDictionary *)info
-   withPassword:(NSString *)password
-       andBlock:(void (^)(KLUser *user, NSError *error))block
+
+- (void) create:(NSDictionary *)data
+         bucket:(KLBucket *)bucket
+      withBlock:(void (^)(KLObject *obj, NSError *error))block
 {
-    NSMutableDictionary *info2 = [info mutableCopy];
-    info2[@"password"] = password;
+    NSString *url = [NSString stringWithFormat:@"%@/apps/%@%@/objects", self.app.baseURL, self.app.appID, [bucket getResourcePath]];
     
-    NSString *url = [NSString stringWithFormat:@"%@/apps/%@/users", self.app.baseURL, self.app.appID];
     id<KLHTTPClient> client = [self.app.factory newClient];
     [KLAPIImplUtils initClient:client
                            url:url
@@ -40,13 +38,13 @@
                       andToken:self.app.accessToken];
     
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:info2 options:NSJSONWritingPrettyPrinted error:&error];
+    NSData *rawData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
     if (error != nil) {
         block(nil, error);
         return;
     }
     [client setHeaderWithKey:@"content-type" andValue:@"application/json"];
-    [client setData:data];
+    [client setData:rawData];
     
     [client sendRequest:^(KLHTTPResponse *response, NSError *error) {
         if (error != nil) {
@@ -62,8 +60,12 @@
             block(nil, [NSError errorWithDomain:@"" code:response.status userInfo:nil]);
             return;
         }
-        KLUser *user = [[KLUser alloc] initWithJSON:json];
-        block(user, nil);
+        NSString *objID = json[@"objectID"];
+        KLObject *obj = [[KLObject alloc] initWithBucket:bucket andID:objID];
+        [obj updateWithJSON:data];
+        block(obj, nil);
     }];
+
+  
 }
 @end

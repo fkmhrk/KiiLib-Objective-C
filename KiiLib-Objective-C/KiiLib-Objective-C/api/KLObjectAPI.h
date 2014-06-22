@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KLObject.h"
+#import "KLBucket.h"
 
 @protocol KLObjectAPI <NSObject>
 
+- (void) create:(NSDictionary *)data bucket:(KLBucket *)bucket withBlock:(void (^)(KLObject *obj, NSError *error))block;
 @end

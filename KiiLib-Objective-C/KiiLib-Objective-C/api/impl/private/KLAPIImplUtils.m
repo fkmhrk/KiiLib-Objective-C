@@ -15,7 +15,6 @@
             method:(NSString *)method
              appID:(NSString *)appID
             appKey:(NSString *)appKey
-           baseURL:(NSString *)url
           andToken:(NSString *)token
 {
     [client setURL:url];

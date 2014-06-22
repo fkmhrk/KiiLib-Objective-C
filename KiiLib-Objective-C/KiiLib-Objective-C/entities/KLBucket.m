@@ -10,12 +10,22 @@
 
 @implementation KLBucket
 
-- (KLBucket *)initWithName:(NSString *)name
+- (KLBucket *)initWithOwner:(id<KLBucketOwnable>)owner andName:(NSString *)name;
 {
     self = [super init];
     if (self != nil) {
+        self.owner = owner;
         self.name = name;
     }
     return self;
+}
+
+- (NSString *)getResourcePath
+{
+    if (self.owner == nil) {
+        return [NSString stringWithFormat:@"/buckets/%@", self.name ];
+    } else {
+        return [NSString stringWithFormat:@"%@/buckets/%@", [self.owner getResourcePath], self.name ];
+    }
 }
 @end

@@ -13,6 +13,9 @@
 
 - (KLObject *)initWithBucket:(KLBucket *)bucket andID:(NSString *)id;
 
+- (void) updateWithJSON:(NSDictionary *)json;
+
 @property KLBucket *bucket;
 @property NSString *id;
+@property NSMutableDictionary *json;
 @end

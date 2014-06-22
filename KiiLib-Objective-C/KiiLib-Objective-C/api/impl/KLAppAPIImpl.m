@@ -8,27 +8,11 @@
 
 #import "KLAppAPIImpl.h"
 #import "KLUserAPIImpl+private.h"
+#import "KLObjectAPIImpl+private.h"
 #import "KLRequest.h"
 
 #import "KLAPIImplUtils.h"
 @implementation KLAppAPIImpl
-
--(KLAppAPIImpl*) initWithSession:(NSURLSession *)session
-                           AppID:(NSString *)appID
-                          appKey:(NSString *)appKey
-                      andBaseURL:(NSString *)url
-{
-    self = [super init];
-    if (self != nil) {
-        self.session = session;
-        self.appID = appID;
-        self.appKey = appKey;
-        self.baseURL = url;
-        
-        self.userAPI = [[KLUserAPIImpl alloc] initWithApp:self];
-    }
-    return self;
-}
 
 -(KLAppAPIImpl*) initWithFactory:(id<KLHTTPClientFactory>)factory
                            AppID:(NSString*)appID
@@ -43,6 +27,7 @@
         self.baseURL = url;
         
         self.userAPI = [[KLUserAPIImpl alloc] initWithApp:self];
+        self.objectAPI = [[KLObjectAPIImpl alloc] initWithApp:self];
     }
     return self;
 }
@@ -87,7 +72,6 @@
                         method:@"POST"
                          appID:self.appID
                         appKey:self.appKey
-                       baseURL:self.baseURL
                       andToken:self.accessToken];
     
     NSError *error = nil;

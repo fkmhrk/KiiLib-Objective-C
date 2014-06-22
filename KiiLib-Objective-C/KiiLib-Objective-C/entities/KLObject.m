@@ -16,7 +16,31 @@
     if (self != nil) {
         self.bucket = bucket;
         self.id = id;
+        self.json = [[NSMutableDictionary alloc] init];
     }
     return self;
+}
+
+- (void) updateWithJSON:(NSDictionary *)json
+{
+    for (NSString *key in [json allKeys]) {
+        self[key] = json[key];
+    }
+}
+
+- (void) setObject:(id)anObject forKey:(id<NSCopying>)aKey
+{
+    [self.json setObject:anObject
+              forKey:aKey];
+}
+
+- (void) removeObjectForKey:(id)aKey
+{
+    [self.json removeObjectForKey:aKey];
+}
+
+- (id) objectForKey:(id)aKey
+{
+    return [self.json objectForKey:aKey];
 }
 @end
